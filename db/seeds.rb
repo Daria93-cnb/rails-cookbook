@@ -7,3 +7,39 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+puts "Cleaning database..."
+Bookmark.destroy_all
+Category.destroy_all
+Recipe.destroy_all
+
+puts "Creating recipes..."
+r1 = Recipe.create!(
+  name: "Spaghetti Carbonara",
+  description: "A true Italian Carbonara recipe, it's ready in about 30 minutes. There is no cream...",
+  image_url: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  rating: 8.5
+)
+
+r2 = Recipe.create!(
+  name: "Avocado Toast",
+  description: "A quick and easy breakfast or brunch made with ripe avocados and crispy toast.",
+  image_url: "https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  rating: 9.1
+)
+
+r3 = Recipe.create!(
+  name: "Chicken Caesar Salad",
+  description: "Classic Caesar salad with grilled chicken, crunchy croutons, and creamy dressing.",
+  image_url: "https://plus.unsplash.com/premium_photo-1700089483464-4f76cc3d360b?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  rating: 7.8
+)
+
+r4 = Recipe.create!(
+  name: "Blueberry Pancakes",
+  description: "Fluffy pancakes loaded with fresh blueberries and a hint of vanilla.",
+  image_url: "https://images.unsplash.com/photo-1620991565081-82743a5a499c?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  rating: 8.3
+)
+
+puts "Finished creating recipes."
