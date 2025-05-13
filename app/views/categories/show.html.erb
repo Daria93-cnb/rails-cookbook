@@ -1,8 +1,15 @@
-<h1><%= @category.name %></h1>
+<h1>This is your <%= @category.name %> category</h1>
 
 <h2>Recipes in this category:</h2>
+
 <ul>
-  <% @category.recipes.each do |recipe| %>
-    <li><%= recipe.name %></li>
+  <% @category.bookmarks.each do |bookmark| %>
+    <li>
+      <%= bookmark.recipe.name %> |
+      <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete } %>
+    </li>
   <% end %>
 </ul>
+
+<%= link_to "Add Recipe", new_category_bookmark_path(@category.id) %><br>
+<%= link_to "Back to Categories", categories_path %>
