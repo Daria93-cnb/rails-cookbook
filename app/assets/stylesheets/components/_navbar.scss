@@ -1,0 +1,13 @@
+.navbar {
+  padding: 5px 20px;
+  img {
+    width: 60px;
+  }
+
+  a {
+    color: black;
+    &:hover {
+      color: #A34B00;
+    }
+  }
+}
