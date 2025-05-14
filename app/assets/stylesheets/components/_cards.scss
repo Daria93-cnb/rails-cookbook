@@ -48,8 +48,23 @@
   margin: 0;
 }
 
-.card-trip-desciption h3 {
-  font-size: calc(0.8 rem + 0.4vw)
+.card-trip-desciption {
+  padding: 16px;
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.btn-delete {
+  float: right;
+  right: 20px;
+  top: 10px;
+  color: grey;
+
+  &:hover {
+    color: red;
+  }
 }
 
 .card-trip .card-trip-infos {
